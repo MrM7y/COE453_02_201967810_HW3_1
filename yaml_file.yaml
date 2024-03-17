@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  title: CalculatorAPI
+  description: APIGateway for a simple 4 operations calculator.
+  version: 1.0.0
+
+host: calculatorapi.apigateway.sublime-elixir-414816.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      operationId: add
+      summary: Adding two integers by Cloud Function and reply with the result.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/add
+
+  /sub:
+    post:
+      operationId: sub
+      summary: Subtracting two integers by Cloud Function and reply with the result.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/sub
+
+  /mul:
+    post:
+      operationId: mul
+      summary: Multiplying two integers by Cloud Function and reply with the result..
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/mul
+        
+  /div:
+    post:
+      operationId: div
+      summary: Dividing two integers by Cloud Function and reply with the result..
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/div
