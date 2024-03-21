@@ -12,7 +12,7 @@ schemes:
 
 paths:
   /add:
-    get:
+    post:
       operationId: add
       summary: Adding two integers by Cloud Function and reply with the result.
       produces:
@@ -24,7 +24,7 @@ paths:
         address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/add
 
   /sub:
-    get:
+    post:
       operationId: sub
       summary: Subtracting two integers by Cloud Function and reply with the result.
       produces:
@@ -36,7 +36,7 @@ paths:
         address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/sub
 
   /mul:
-    get:
+    post:
       operationId: mul
       summary: Multiplying two integers by Cloud Function and reply with the result..
       produces:
@@ -48,7 +48,7 @@ paths:
         address: https://us-central1-sublime-elixir-414816.cloudfunctions.net/mul
         
   /div:
-    get:
+    post:
       operationId: div
       summary: Dividing two integers by Cloud Function and reply with the result..
       produces:
